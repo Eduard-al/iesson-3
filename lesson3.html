@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>lesson-3</title>
+    <script>
+        //задание№1
+        var number = 0;
+        while (number <= 100) {
+            i = 1;
+            counter = 0;
+            while (i <= (number / 2)) {
+                if (number % i == 0) {
+                    counter++
+                };
+                i++
+            }
+            if (counter == 1) {
+                console.log(number)
+            };
+            number++;
+        }
+
+
+        //задание№2-3
+        var goods = [
+            {
+                title: "Товар 1",
+                price: 100,
+                quantity: 5
+            },
+            {
+                title: "Товар 2",
+                price: 200,
+                quantity: 8
+            },
+            {
+                title: "Товар 3",
+                price: 150,
+                quantity: 6
+            }
+        ]
+        var products = 0
+        var basketPrice = 0
+        function countBasketPrice() {
+            for (var item of goods) {
+                var amount = item.price * item.quantity
+                basketPrice = basketPrice + amount
+                products = products + item.quantity
+            }
+            console.log("всего товаров-" + products + " на сумму-" + basketPrice);
+        }
+        countBasketPrice()
+
+
+        //задание№4*
+        for (var i = 0; i < 10; console.log(i++)) { }
+
+        //задание№4
+        var mas = ["x"];
+        for (var i = 0; i < 21; i++) {
+            console.log(mas.join(''));
+            mas.push("x");
+        }
+
+    </script>
+</head>
